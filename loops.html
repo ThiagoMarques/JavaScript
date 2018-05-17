@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+			Laços de Repetição
+			* while/do -> enquanto o teste lógico for true, ele repetirá uma determinada tarefado/
+			* do/while -> executa a tarefa, antes de avaliar o teste lógico
+			* sintaxe: for(ini;teste lógico; operador) {tarefa executada}
+		*/
+
+		function contarCem(){
+			var cont = 0;
+			var soma = 0;
+			while(cont <= 100) {
+				document.write(cont + " ");
+				soma = cont + soma;
+				cont++;
+			}
+
+			var media = soma / cont;
+			
+			document.write("<br><br>Soma é: " +soma);
+			document.write("<br>Média é: " +media);
+
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+
+		}
+
+		function contarCemPar(){
+			var cont = 0;
+			var soma = 0;
+			while(cont <= 100) {
+				if(cont % 2 == 0)
+				{
+					document.write(cont + " ");
+					soma = cont + soma;
+				}
+				cont++;
+			}
+			var media = soma / cont;
+			media = media.toFixed(2);
+			document.write("<br><br>Soma é: " +soma);
+			document.write("<br>Média é: " +media);
+
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function contarCemImpar(){
+			var cont = 0;
+			var soma = 0;
+			while(cont <= 100) {
+				if(cont % 2 != 0)
+				{
+					document.write(cont + " ");
+					soma = cont + soma;
+				}
+				cont++;
+			}
+			var media = soma / cont;
+			media = media.toFixed(2);
+			document.write("<br><br>Soma é: " +soma);
+			document.write("<br>Média é: " +media);
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function contarZero(){
+			var cont = 100;
+			while(cont >= 0) {
+				document.write(cont + " ");
+				cont--;
+			}
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function campos() {
+			var cont = 1;
+			do {
+				document.write("<input placeholder='Campo de Entrada'> <br><br>");
+				cont++;
+			}
+			while(cont <= 1);
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function forCem() {
+			for(var cont = 0; cont<=100; cont++) {
+				document.write(cont + " ");
+			}
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function forCemInvertido() {
+			for(var cont = 100; cont!=0; cont--) {
+				document.write(cont + " ");
+			}
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function arraysInicio() {
+			/* Arrays -> permite armazenar um conjunto de dados (unidimensional)*/
+			var cores = ["Verde", "Amarelo", "Azul", "Branco", "Preto"];
+			document.write("Cores = [Verde, Amarelo, Azul, Branco, Preto]<br>");
+			document.write("O array possui " + cores.length + " elementos <br><br>");
+			/*for(var i=0; i < cores.length; i++) {
+				document.write(cores[i] + "<br>");
+			}*/
+			for(elemento in cores) {
+				document.write(cores[elemento] + "<br>");
+			}
+
+			document.write('<br><br><a href="' + document.referrer + '">Retornar</a>');
+		}
+
+		function elemento() {
+			var form = document.getElementById("formulario");
+			//window.alert(typeof(form));
+			/* object.attribute.value */
+			var nome = form.nome.value;
+			var email = form.email.value;
+			//window.alert(nome + "\n" +email);
+			form.rnome.value = nome;
+			form.remail.value = email;
+		}
+
+
+
+	</script>
+
+	Uso do While: <button onclick="contarCem()">Conte até 100</button>
+	<button onclick="contarCemPar()">Conte até 100 PAR</button>
+	<button onclick="contarCemImpar()">Conte até 100 IMPAR</button>
+	<button onclick="contarZero()">Conte até 0</button><br><br>
+	Campos de Entrada: <button onclick="campos()">Campos</button><br><br>
+	Uso do For: <button onclick="forCem()">For100</button>
+	<button onclick="forCemInvertido()">For100Invertido</button><br><br>
+	Arrays: <button onclick="arraysInicio()">Array</button>
+	<br> </br>
+	<hr>
+	Formulário:
+	<br> <br>
+	<form id="formulario">
+		<input type="text" name="nome" placeholder="Digite o deu nome: " size="35">
+		<input type="email" name="email" placeholder="Digite o seu email: " size="35">
+		<input type="button" onclick="elemento()" value="Enviar">
+		<br> </br>
+		<hr>
+		Resultado:<br><br>
+		<input type="text" disabled name="rnome" size="35">
+		<input type="text" disabled name="remail" size="35">
+	</form>
+
+</body>
+</html>
