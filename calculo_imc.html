@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercícios</title>
+</head>
+<body>
+	<!-- Escreva um Algoritmo em que o usuário digite o peso (kg) e altura (m) e calcule o IMC e retorne o resultado de acordo com  as condições abaixo: 
+	
+	Fórmula: peso / (altura * altura)
+	
+	*HOMEM
+
+	IMC				Condição
+
+	< 20.7			Abaixo do Peso
+	20.7 - 26.4		Peso Ideal
+	27.8 - 31.1		Acima do Peso
+	
+	*MULHER
+	
+	IMC				Condição
+	<19.1			Abaixo do Peso
+	19.1 - 25.8		Peso Ideal
+	27.3 - 32.3		Acima do Peso	
+
+
+	##########################################################################################################################
+
+	Cálculo da Comissão de um vendedor
+
+	Escreva um algoritmo em que o usuário digita o nome do vendedor, o salário, o total de vendas, calcula a cmoissão sobre o total das vendas, retorne o nome do vendedor, salário, a comissão e o salário total, de acordo com o critério abaixo:
+
+	Total de vendas 			Comissão
+	1000-5000 					3%
+	>5000-10000					5%
+	>10000						10%
+	
+
+	<script src="exercicio.js"></script>
+	<h3>Cálculo do IMC</h3>
+	<form id="formulario">
+		<input type="text" name="peso" placeholder="Digite o seu peso: " size="15">
+		<input type="text" name="altura" placeholder="Digite a sua altura: " size="15">
+		<input type="button" onclick="elemento1()" value="Enviar">
+		<br> </br>
+		<hr>
+		Resultado:<br><br>
+		<input type="text" disabled name="resultado" size="15">
+	</form>
+
+	-->
+	<script src="imc.js"></script>
+	<h3>Cálculo do IMC</h3>
+	<form id="formulario">
+		<input type="text" name="peso" placeholder="Peso:(quilogramas)">
+		<input type="text" name="altura" placeholder="Altura:(metros)">
+		<select id = "sexo" name="genero">
+			<option value="M">Masulino</option>option>
+			<option value="F">Feminino</option>option>
+		</select>
+		<!--<input type="button" onclick="elemento1()" value="Enviar"> -->
+		<input type="button" onclick="elemento1()" value ="Calcular">
+		<br><br>
+		<hr>
+		<br>Resultado IMC: 
+		<input type="text" name="resultado" size="15">
+		<br><br>
+		<input type="text" name="mensagem" size="35">
+	</form> 
+	
+
+</body>
+</html>
